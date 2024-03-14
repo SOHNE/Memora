@@ -1,9 +1,11 @@
 set(MEMORA_SOURCE_FILES
-
+    mm.c
 )
 
 set(MEMORA_HEADER_FILES
     ../include/memora/ma_api.h
+    ../include/memora/mm.h
+    ../include/memora/uapi_mm.h
 )
 
 add_library(memora ${MEMORA_SOURCE_FILES} ${MEMORA_HEADER_FILES})
@@ -16,8 +18,8 @@ target_include_directories(memora
 
 set_target_properties(memora PROPERTIES
     LINKER_LANGUAGE C
-    C_STANDARD 20
-    C_EXTENSIONS OFF
+    C_STANDARD 17
+    C_EXTENSIONS NO
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
 )
