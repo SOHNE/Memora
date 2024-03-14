@@ -18,8 +18,9 @@ target_include_directories(memora
 
 set_target_properties(memora PROPERTIES
     LINKER_LANGUAGE C
-    C_STANDARD 17
-    C_EXTENSIONS NO
+    C_STANDARD 23
+    C_EXTENSIONS ON
+    C_STANDARD_REQUIRED ON
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
 )
