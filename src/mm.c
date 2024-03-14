@@ -1,5 +1,9 @@
 #include "memora/uapi_mm.h"
 
+#include <memory.h>
+#include <unistd.h>     // For getpagesize
+#include <sys/mman.h>   // For mmap
+
 static size_t SYSTEM_PAGE_SIZE = 0;
 
 void
